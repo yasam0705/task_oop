@@ -5,12 +5,14 @@ import "fmt"
 type teamLead struct {
 	Id   int
 	Name string
+	Dir  director
 }
 
-func NewTeamLead(name string) *teamLead {
+func NewTeamLead(name string, d *director) *teamLead {
 	return &teamLead{
 		Id:   ID,
 		Name: name,
+		Dir:  *d,
 	}
 }
 

@@ -14,12 +14,13 @@ func NewDirector(name string) *director {
 	}
 }
 
-func (dr director) GiveTask(taskid int, name, deadline string) (task, error) {
+func (dr director) GiveTask(taskid int, name, deadline string, tl *teamLead) (task, error) {
 	newTask := task{
 		Id:       taskid,
 		Name:     name,
 		Status:   InitStatus,
 		Deadline: deadline,
+		TeamLead: *tl,
 	}
 
 	TaskList = append(TaskList, newTask)

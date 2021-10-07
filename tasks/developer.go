@@ -5,14 +5,16 @@ import (
 )
 
 type developer struct {
-	Id   int
-	Name string
+	Id       int
+	Name     string
+	TeamLead teamLead
 }
 
-func NewDeveloper(name string) *developer {
+func NewDeveloper(name string, t *teamLead) *developer {
 	return &developer{
-		Id:   ID,
-		Name: name,
+		Id:       ID,
+		Name:     name,
+		TeamLead: *t,
 	}
 }
 

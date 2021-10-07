@@ -12,6 +12,7 @@ type task struct {
 	Name     string
 	Status   string
 	Deadline string
+	TeamLead teamLead
 }
 
 var TaskList []task = make([]task, 0)
